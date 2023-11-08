@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 200vh;
+  font-family: 'Cabin', Sans-serif;
+  background-color: #EAF2E4;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background: #0A2239;
+  margin: 0px;  
+  z-index: 9;
+}
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #BDD5EA;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input{
+  display: none;
+}
+
+#hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(
+      to bottom, 
+      #176087, #176087 20%, 
+      #EAF2E4 20%, #EAF2E4 40%, 
+      #176087 40%, #176087 60%, 
+      #EAF2E4 60%, #EAF2E4 80%, 
+      #176087 80%, #176087 100%
+    );
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #0A2239;
+    transition: 0.3s;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #BDD5EA;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #BDD5EA;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+#hamburger-input:checked ~ .overlay{
+   visibility: visible;
+  opacity: 0.4;
+}
+
+section {
+    max-width: 550px;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4em;
+}
+
+#TM {
+font-size: 40px;
+}
+
+#statement {
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+    font-weight: 200;
+    line-height: 1.6em;
+    font-size: x-large;
+}
+
+#stories {
+    background-color: #BDD5EA;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#stories ul {
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+#graphics {
+    background-color: #4E937A;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+#graphics ul {
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+#bylines ul li a {
+    color: #132E32;
+}
+
+#bylines ul li a:visited {
+    color: #0A2239;
+}
+
+#bylines ul li a:hover {
+    color: #176087;
+}
+
+#bylines {
+    font-size: x-large;
+}
+
+@media screen and (max-width: 750px) {
+    #main-menu {
+      display: none;
+    }
+    #hamburger-menu {
+      display: inline;
+    }
+    #bylines {
+        font-size: medium;
+    }
+  }
