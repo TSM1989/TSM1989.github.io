@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
 body {
   padding: 0px;
   margin: 0px;
   font-size: 20px;
   min-height: 200vh;
-  font-family: 'Cabin', Sans-serif;
-  background-color: #EAF2E4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fff;
 }
 
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -73,14 +74,14 @@ body {
     border: none;
     padding: 0px;
     margin: 0px;
-    font-family: 'Cabin', Sans-serif;
+    font-family: "Poppins", Sans-serif;
     background: linear-gradient(
       to bottom, 
-      #176087, #176087 20%, 
-      #EAF2E4 20%, #EAF2E4 40%, 
-      #176087 40%, #176087 60%, 
-      #EAF2E4 60%, #EAF2E4 80%, 
-      #176087 80%, #176087 100%
+      #0A2239, #0A2239 20%, 
+      #FFFFFF 20%, #FFFFFF 40%, 
+      #0A2239 40%, #0A2239 60%, 
+      #FFFFFF 60%, #FFFFFF 80%, 
+      #0A2239 80%, #0A2239 100%
     );
 }
 
@@ -150,8 +151,27 @@ font-size: 40px;
     font-size: x-large;
 }
 
+.bottomhalf {
+  background-color: #0A2239;
+  color: #fff;
+}
+
+.bylineheader {
+  background-color: #273B09;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bylinetext {
+  color: white;
+  text-align: center;
+}
+
 #stories {
-    background-color: #BDD5EA;
+    background-color: #;
     border-radius: 10px;
     text-align: center;
     margin: 10px;
@@ -165,7 +185,7 @@ font-size: 40px;
 }
 
 #graphics {
-    background-color: #4E937A;
+    background-color: #;
     border-radius: 10px;
     text-align: center;
     margin: 10px;
@@ -179,19 +199,31 @@ font-size: 40px;
 }
 
 #bylines ul li a {
-    color: #132E32;
+    color: #BDD5EA;
 }
 
 #bylines ul li a:visited {
-    color: #0A2239;
+    color: #BDD5EA;
 }
 
 #bylines ul li a:hover {
-    color: #176087;
+    color: lightgray;
 }
 
 #bylines {
     font-size: x-large;
+    text-align: center;
+    padding: 5px;
+    margin: 0px, 0px, 0px, 0px;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #0A2239; 
+  opacity: 0.75;
+  color: #fff;
+  font-size: small;
 }
 
 @media screen and (max-width: 750px) {
